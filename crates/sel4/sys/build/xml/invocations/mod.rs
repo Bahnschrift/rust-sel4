@@ -537,14 +537,6 @@ impl ParameterTypes {
             this.insert_capability("seL4_ARM_IOPageTable");
         }
 
-        if sel4_cfg_bool!(ARCH_RISCV) {
-            this.insert_enum("seL4_RISCV_VMAttributes", WORD_SIZE);
-            this.insert_capability("seL4_RISCV_Page");
-            this.insert_capability("seL4_RISCV_PageTable");
-            this.insert_capability("seL4_RISCV_ASIDControl");
-            this.insert_capability("seL4_RISCV_ASIDPool");
-        }
-
         if sel4_cfg_bool!(ARCH_X86_64) {
             this.insert_enum("seL4_X86_VMAttributes", WORD_SIZE);
             this.insert_enum("seL4_X86_EPT_VMAttributes", WORD_SIZE);
