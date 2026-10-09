@@ -18,8 +18,11 @@ edition = "2024"
 license = "BSD-2-Clause"
 links = "sel4"
 
+[features]
+logging = ["dep:log"]
+
 [dependencies]
-log = "0.4.28"
+log = { version = "0.4.28", optional = true }
 sel4-bitfield-ops = { path = "../bitfield-ops" }
 sel4-config = { path = "../config" }
 

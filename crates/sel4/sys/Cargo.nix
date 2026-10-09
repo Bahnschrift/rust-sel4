@@ -10,8 +10,11 @@ mk {
   package.name = "sel4-sys";
   package.links = "sel4";
   package.build = "build/main.rs";
+  features = {
+    logging = [ "dep:log" ];
+  };
   dependencies = {
-    inherit (versions) log;
+    log = { version = versions.log; optional = true; };
     inherit (localCrates)
       sel4-config
       sel4-bitfield-ops

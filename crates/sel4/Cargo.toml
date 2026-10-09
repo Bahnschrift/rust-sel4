@@ -19,6 +19,7 @@ rust-version = "1.85"
 
 [features]
 default = ["state"]
+logging = ["sel4-sys/logging"]
 exposed-state = []
 extern-state = []
 non-thread-local-state = []

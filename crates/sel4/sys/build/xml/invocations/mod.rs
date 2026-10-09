@@ -195,6 +195,7 @@ impl<'a> InvocationGenerator<'a> {
             );
             let fmt_args = in_params.iter().map(|param| raw_ident(&param.name));
             quote! {
+                #[cfg(feature = "logging")]
                 log::trace!(#fmt_string, service, #(#fmt_args,)*);
             }
         };

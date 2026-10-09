@@ -22,6 +22,7 @@ mk rec {
   };
   features = {
     default = [ "state" ];
+    logging = [ "sel4-sys/logging" ];
     state = [];
     exposed-state = [];
     extern-state = [];
